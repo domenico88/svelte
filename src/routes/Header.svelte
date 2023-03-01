@@ -1,129 +1,70 @@
 <script>
-	import { page } from '$app/stores';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
+  import { page } from "$app/stores";
 </script>
 
 <header>
-	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
-	</div>
-
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a href="/sverdle">Sverdle</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
-		</a>
-	</div>
+  <nav class="flex items-center justify-between flex-wrap bg-fuchsia-800 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <span class="font-semibold text-xl tracking-tight">Fido</span>
+    </div>
+    <div class="block lg:hidden">
+      <button
+        class="flex items-center px-3 py-2 border rounded text-teal-200 hover:text-white hover:border-white"
+      >
+        <svg
+          class="fill-current h-3 w-3"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><title>Menu</title><path
+            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+          /></svg
+        >
+      </button>
+    </div>
+    <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+        <a
+          href="#responsive-header"
+          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+        >
+          Produts
+        </a>
+        <a
+          href="#responsive-header"
+          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+        >
+          Solutions
+        </a>
+        <a
+          href="#responsive-header"
+          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+        >
+          Resources
+        </a>
+        <a
+          href="#responsive-header"
+          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
+        >
+          Companies
+        </a>
+      </div>
+      <div>
+        <a
+          href="#"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0 mr-4"
+          >Sign up</a
+        >
+      </div>
+      <div>
+        <a
+          href="#"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0"
+          >Log in</a
+        >
+      </div>
+    </div>
+  </nav>
 </header>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li[aria-current='page']::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--color-theme-1);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
-		color: var(--color-text);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--color-theme-1);
-	}
 </style>
