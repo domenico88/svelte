@@ -5,7 +5,13 @@
 <header>
   <nav class="flex items-center justify-between flex-wrap bg-fuchsia-800 p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <span class="font-semibold text-xl tracking-tight">Fido</span>
+      <span
+        on:click={() => {
+          window.location.href = "/";
+        }}
+        on:keydown
+        class="font-semibold text-xl tracking-tight cursor-pointer">Fido</span
+      >
     </div>
     <div class="block lg:hidden">
       <button
@@ -24,30 +30,19 @@
     <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
       <div class="text-sm lg:flex-grow">
         <a
-          href="#responsive-header"
+          href="/counter"
           class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
         >
-          Produts
+          Counter
         </a>
         <a
-          href="#responsive-header"
+          href="/products"
           class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
         >
-          Solutions
-        </a>
-        <a
-          href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
-        >
-          Resources
-        </a>
-        <a
-          href="#responsive-header"
-          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white"
-        >
-          Companies
+          Products
         </a>
       </div>
+
       <div>
         <a
           href="#"
