@@ -1,7 +1,3 @@
-<script>
-  import { page } from "$app/stores";
-</script>
-
 <header>
   <nav class="flex items-center justify-between flex-wrap bg-fuchsia-800 p-6">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
@@ -40,6 +36,12 @@
           class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
         >
           Products
+        </a>
+        <a
+          href="/dogz"
+          class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4"
+        >
+          Dogz
         </a>
       </div>
 
