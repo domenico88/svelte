@@ -4,18 +4,15 @@ import type { Load } from "@sveltejs/kit";
 export const load: Load = async ({ fetch }) => {
   const res = await fetch(`https://dog.ceo/api/breeds/list/all`);
   const item: any = await res.json();
-  console.log(item);
 
   const res_african: any = await fetch(
     `https://dog.ceo/api/breed/african/images/random`
   );
   const african: any = await res_african.json();
-  console.log(african);
   const res_airedale: any = await fetch(
     `https://dog.ceo/api/breed/airedale/images/random`
   );
   const airedale: any = await res_airedale.json();
-  console.log(airedale);
   return {
     african: african.message,
     airedale: airedale.message,
